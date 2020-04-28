@@ -21,6 +21,13 @@ API : http://localhost/wop/php/prj0001-UsingChartJs/api/api.php?readDataSets
 
 Response: 
 
-[{"crime":"Kidnapping","data":[0,1,1]},{"crime":"Murder","data":[1,2,1]},{"crime":"Rape","data":[1,1,0]}]
+[
+    {
+        "crime":"Kidnapping",
+        "data":[0,1,1]
+    },
+    {"crime":"Murder","data":[1,2,1]},
+    {"crime":"Rape","data":[1,1,0]}
+]
 
 

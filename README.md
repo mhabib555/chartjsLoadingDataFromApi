@@ -3,11 +3,21 @@
 Chartjs https://www.chartjs.org/
 
 
-![Chart Image](chart1.PNG)
+![Chart Image](readMeImages/chart1.PNG)
 
 
 
 <h2>PHP Rest Api End Points</h2>
+Directory Structure:
+inc - folder
+vendor - folder
+.env - env variable files
+api.php - api end file
+composer.php - composer file
+composer.lock - composer file
+
+We have used https://github.com/vlucas/phpdotenv package to load enviroment variables from .env file. If you don't want to use it, you can remove .env , vendor (folder), composer.php and composer.lock and write env variables directly in api.php file
+
 
 API : http://localhost/wop/php/prj0001-UsingChartJs/api/api.php?readLabels
 

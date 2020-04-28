@@ -3,6 +3,10 @@
 Chartjs https://www.chartjs.org/
 
 
+![Chart Image]("chart1.png")
+
+
+
 <h2>PHP Rest Api End Points</h2>
 
 API : http://localhost/wop/php/prj0001-UsingChartJs/api/api.php?readLabels

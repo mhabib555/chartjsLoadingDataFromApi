@@ -20,19 +20,23 @@
     <script>
         $(function(){
             let labels = '';
+            // load labels from api
             $.ajax({url: "http://localhost/wop/php/prj0001-UsingChartJs/api/api.php?readLabels", success: (result) => {
                 let res = JSON.parse(result);
                 labels = res;
             }});
+            // load data for datasets from api
             $.ajax({url: "http://localhost/wop/php/prj0001-UsingChartJs/api/api.php?readDataSets", success: function(result){
                 let res2 = JSON.parse(result);
                 myDataSet = [];
                 j = 0
                 let colorslist = ["blue","orange","magenta","green","syrup","navy","bumblebee","turkish","army","ferrari"];
+                // prepare datesets from loaded data 
                 res2.forEach((item, index)=>{
                     myDataSet.push({label: item.crime, boderColor: colorslist[j], backgroundColor: colorslist[j], data: item.data});
                     j++;
                 });
+                // print chart using loaded labels and datasets
                 printBarChart(labels,myDataSet);
  
             }});           

@@ -3,7 +3,7 @@
 Chartjs https://www.chartjs.org/
 
 
-![Chart Image](chart1.png)
+![Chart Image](chart1.PNG)
 
 
 

@@ -15,6 +15,7 @@ Chartjs https://www.chartjs.org/
 <p>&nbsp;</p>
 
 <h4>Final Data View</h4>
+
 ![Chart Image](readMeImages/chart1.PNG)
 
 In index.html we have two ajax request that request data (labels and data) for chart. We have a separate function for prinitng chart.

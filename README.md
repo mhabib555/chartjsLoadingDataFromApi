@@ -1,9 +1,24 @@
 <h1> Example of Chartjs loading data from php rest api </h1>
 
+
 Chartjs https://www.chartjs.org/
 
+<h3>Project Directory</h3>
+<ul>
+<li>api - folder - contain php files /backend codes</li>
+<li>css - folder - contain style for html</li>
+<li>readMeImages - folder - contain images for github images/you can delete it</li>
+<li>sqlFile - folder - sql file contain crime database table</li>
+<li>index.html - file - main index file</li>
+<li>README.md - file - readme file for github</li>
+</ul>
+<p>&nbsp;</p>
 
+<h4>Final Data View</h4>
 ![Chart Image](readMeImages/chart1.PNG)
+
+In index.html we have two ajax request that request data (labels and data) for chart. We have a separate function for prinitng chart.
+The ajax send request to api (api php) and get the below mentioned responses.
 
 
 

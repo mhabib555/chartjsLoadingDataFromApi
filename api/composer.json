@@ -1,0 +1,12 @@
+{
+    "name": "mh/api",
+    "authors": [
+        {
+            "name": "Muhammad Habib",
+            "email": "mhabib555@gmail.com"
+        }
+    ],
+    "require": {
+        "vlucas/phpdotenv": "^4.1"
+    }
+}

@@ -1,0 +1,56 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <canvas id="myChart"></canvas>
+
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(function(){
+            let labels = '';
+            $.ajax({url: "http://localhost/wop/php/prj0001-UsingChartJs/api/api.php?readLabels", success: (result) => {
+                let res = JSON.parse(result);
+                labels = res;
+            }});
+            $.ajax({url: "http://localhost/wop/php/prj0001-UsingChartJs/api/api.php?readDataSets", success: function(result){
+                let res2 = JSON.parse(result);
+                myDataSet = [];
+                j = 0
+                let colorslist = ["blue","orange","magenta","green","syrup","navy","bumblebee","turkish","army","ferrari"];
+                res2.forEach((item, index)=>{
+                    myDataSet.push({label: item.crime, boderColor: colorslist[j], backgroundColor: colorslist[j], data: item.data});
+                    j++;
+                });
+                printBarChart(labels,myDataSet);
+ 
+            }});           
+
+        });
+        function printBarChart(labels,data){
+            var ctx = document.getElementById('myChart').getContext('2d');
+            var chart = new Chart(ctx, {
+                // The type of chart we want to create
+                type: 'bar',
+
+                // The data for our dataset
+                data: {
+                    labels: labels,
+                    datasets: data
+                },
+
+                // Configuration options go here
+                options: {}
+            });    
+        }
+
+    </script>
+</body>
+</html>
